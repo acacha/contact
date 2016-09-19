@@ -26,7 +26,7 @@ class ContactServiceProvider extends ServiceProvider
             define('ACACHA_CONTACT_PATH', realpath(__DIR__.'/../../'));
         }
 
-        $this->app->bind('Profile', function () {
+        $this->app->bind('Contact', function () {
             return new \Acacha\Contact\Contact();
         });
 

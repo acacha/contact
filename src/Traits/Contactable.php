@@ -11,7 +11,7 @@ trait Contactable
      */
     public function contacts()
     {
-        return $this->morphMany(Contact::class, 'notifiable')
+        return $this->morphMany(Contact::class, 'contactable')
                             ->orderBy('created_at', 'desc');
     }
 
@@ -20,7 +20,7 @@ trait Contactable
      */
     public function contact()
     {
-        return $this->morphMany(Contact::class, 'notifiable')
+        return $this->morphMany(Contact::class, 'contactable')
             ->orderBy('created_at', 'desc')->first();
     }
 

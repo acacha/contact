@@ -1,11 +1,15 @@
 <?php
 
-namespace Acacha\Contact\Model;
+namespace Acacha\Contact\Models;
 
+use Acacha\Contact\Traits\ContactPresenter;
 use Illuminate\Database\Eloquent\Model;
 
 class Contact extends Model
 {
+
+    use ContactPresenter;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -27,4 +31,12 @@ class Contact extends Model
         'maritalstatus',
 
     ];
+
+    /**
+     * The attributes that should be mutated to dates.
+     *
+     * @var array
+     */
+    protected $dates = ['dateofbirth'];
+
 }

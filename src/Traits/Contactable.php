@@ -2,7 +2,7 @@
 
 namespace Acacha\Contact\Traits;
 
-use Acacha\Contact\Model\Contact;
+use Acacha\Contact\Models\Contact;
 
 trait Contactable
 {
